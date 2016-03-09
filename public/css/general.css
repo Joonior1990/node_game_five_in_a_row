@@ -1,0 +1,424 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=cyrillic-ext,latin-ext);
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+header, footer {
+	display: block;
+}
+.wrap {
+	width: 880px;
+	padding: 0px 10px 10px;
+	margin: 0px auto;
+	background-color: rgba(252, 142, 1, 0.1);
+}
+header p {
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 22px;
+	font-weight: bold;
+	color: rgba(50, 100, 100, 0.9);
+}
+header .disc {
+	color: rgba(20, 50, 10, 0.8);
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+}
+
+.err404 {
+	margin: 50px 0px;
+	padding: 30px;
+	background: rgba(255, 0, 0, 0.5);
+	text-align: center;
+}
+h1 {
+	font-size: 35px;
+}
+
+.main {
+	margin: 20px 0px;
+	height: 515px;
+}
+.main > div,
+.main_cont > div {
+	float: left;
+}
+.chat_list {
+	position: relative;
+	padding-top: 40px;
+	width: 150px;
+	height: 515px;
+	z-index: 2; 
+}
+.chat_list:after {
+	position: absolute;
+	width: 150px;
+	height: 515px;
+	top: 0px;
+	left: 0px;
+	content: '';
+	background-color: rgba(252, 142, 1, 0.1);
+	z-index: -1;
+}
+.chat_list:before {
+	content: 'Участники чата';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(70,50,40, 0.8);
+	color: rgba(255, 255, 255, 0.9);
+	text-transform: uppercase;
+	padding: 10px;
+	width: 130px;
+}
+.main_cont {
+	margin-left: 20px;
+	width: 710px;
+}
+.cont_mess {
+	height: 206px;
+	margin: -2px 0px;
+	overflow-y: auto;
+}
+.cont_chat {
+	height: 476px;
+	margin: -2px 0px;
+	overflow-y: auto;
+}
+.cont_game {
+	height: 165px;
+	margin: -2px 0px;
+	overflow-y: auto;
+}
+.chat_mess {
+	position: relative;
+	width: 510px;
+	height: 255px;
+	padding-top: 40px;
+	background-color: #fff;
+}
+.chat_mess:before {
+	content: 'NODE_chat';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(70,50,40, 0.8);
+	color: rgba(255, 255, 255, 0.9);
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px;
+	width: 490px;
+}
+.new_mes {
+	position: absolute;
+	font-family: 'Roboto', sans-serif;
+	padding: 5px 10px;
+	width: 489px;
+	height: 40px;
+	top: 244px;
+	left: 0px;
+	background-color: rgba(0,0, 200, 0.1);
+	border: none;
+	resize: none;
+	border-top: 1px solid rgba(0,0,0, 0.4);
+	border-radius: 10px 0px 0px 0px;
+}
+.aut {
+	margin-left: 20px;
+	width: 180px;
+	min-height: 100px;
+}
+.hello {
+	width: 180px;
+	height: 70px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: rgba(60,200,70, 0.9);
+	color: #fff;
+}
+.hello span {
+	position: relative;
+	top: 20px;
+}
+input,
+label {
+	display: block;
+	text-align: center;
+	width: 180px;
+	text-transform: lowercase;
+	border: none;
+	border-bottom: 3px solid #000;
+	background-color: rgba(0,0,50, 0.8);
+	box-sizing: border-box;
+	padding: 8px 10px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+}
+input:focus {
+		border-bottom: 3px solid #fff;
+}
+input[type="submit"] {
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+input[type="submit"]:hover {
+	background-color: rgba(0,0,50, 0.4);
+}
+label {
+	position: relative;
+	text-align: left;
+}
+.new_game {
+	cursor: pointer;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: rgba(60,200,70, 0.9);
+	color: #fff;
+}
+.not_game {
+	height: 150px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: rgba(60,100,200, 0.9);
+	color: #fff;
+}
+.not_game span {
+	position: relative;
+	top: 50px;
+}
+.new_game:hover {
+	background-color: rgba(40,240,50, 0.7);
+}
+.game_list {
+	position: relative;
+	padding-top: 40px;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 710px;
+	height: 160px;
+	background-color: #fff;
+}
+.game_list:before {
+	content: 'GAME_list';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(70,50,40, 0.8);
+	color: rgba(255, 255, 255, 0.9);
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px;
+	width: 690px;
+}
+footer {
+	margin-top: 20px;
+	background-color: rgba(0,0,0, 0.4);
+}
+footer p {
+	text-align: right;
+	padding: 10px 10px;
+	margin: 
+}
+.user {
+	font-size: 12px;
+	padding: 5px 10px;
+	border-radius: 0px 0px 10px 0px;
+	border-bottom: 1px solid rgba(0,0,0, 0.4);
+}
+.mess {
+	position: relative;
+	padding: 5px 50px 5px 10px;
+	border-bottom: 1px solid rgba(0,0,0, 0.4);
+	border-radius: 0px 0px 10px 0px;
+}
+.mess.little_mess {
+	padding: 1px 10px;
+	color: #adadad;
+	font-size: 12px;
+}
+.nick {
+	font-weight: bold;
+}
+.text {
+	color: #222;
+	word-wrap: break-word;
+}
+.time {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	margin-top: -8px; 
+	height: 17px;
+	font-weight: bold;
+	font-size: 11px;
+}
+.game {
+	position: relative;
+	padding: 15px 10px;
+	border-bottom: 1px solid rgba(0,0,0, 0.4);
+	border-radius: 0px 0px 10px 0px;
+	overflow-y: auto;
+}
+.game_over {
+	position: relative;
+	overflow: hidden;
+}
+.game_over:before {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	content: 'Игра началась!';
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	background-color: rgba(0,0,0, 0.3);
+	z-index: 2;
+	line-height: 47px;
+	padding-left: 150px;
+}
+.game .time {
+	right: 200px;
+  margin-top: -6px;
+}
+.connect_to_game {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	margin-top: -15px;
+	height: 20px;
+	padding: 5px 10px;
+	width: 160px;
+	text-align: center;
+	color: #fff;
+	text-transform: lowercase;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: rgb(40, 80, 200);
+}
+.connect_to_game:hover {
+	background-color: rgb(20, 40, 220);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.game_user {
+	position: relative;
+	width: 800px;
+	margin: 0px auto 10px;
+	padding: 20px;
+}
+.disconnect_game {
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	text-align: center;
+	width: 180px;
+	text-transform: lowercase;
+	border: none;
+	border-bottom: 3px solid #000;
+	background-color: rgba(150, 0, 0, 0.8);
+	box-sizing: border-box;
+	padding: 8px 10px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+}
+.disconnect_game a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+.disconnect_game:hover {
+	background-color: rgba(250,30,20, 1);
+}
+
+table {
+	margin: 20px auto;
+}
+
+td {
+	width: 15px;
+	height: 15px;
+	border-top: 1px solid rgba(0,0,0, 0.2);
+	border-right: 1px solid rgba(0,0,0, 0.2);
+}
+td:nth-child(1) {
+	border-left: 1px solid rgba(0,0,0, 0.2);
+}
+tr:last-child td {
+	border-bottom: 1px solid rgba(0,0,0, 0.2);
+}
+.checked_first {
+	position: relative;
+}
+.checked_last {
+	position: relative;
+}
+.checked_first:before {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: 0px;
+	border-bottom: 2px solid green;
+	width: 17px;
+	height: 1px;
+	transform: rotate(45deg);
+
+}
+.checked_first:after {
+	content: '';
+	position: absolute;
+	top: 6px;
+	left: -0.5px;
+	border-bottom: 2px solid green;
+	width: 17px;
+	height: 1px;
+	transform: rotate(-45deg);
+}
+
+.checked_last:before {
+	content: '';
+	position: absolute;
+	top: 0.5px;
+	left: 0.5px;
+	border: 2px solid maroon;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+}
+.this_game {
+	font-size: 18px;
+	text-decoration: underline;
+
+
+
